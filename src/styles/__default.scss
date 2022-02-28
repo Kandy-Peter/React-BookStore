@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Serif', sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+
+  button,
+  input,
+  select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
