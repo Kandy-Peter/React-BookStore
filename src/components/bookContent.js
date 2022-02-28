@@ -4,7 +4,7 @@ import { removeBook } from '../redux/books/books';
 
 const Book = (book) => {
   const {
-    category, title, author,
+    category, title, author, id,
   } = book;
   const dispatch = useDispatch();
 
@@ -20,7 +20,7 @@ const Book = (book) => {
         <p>{author}</p>
         <div className="buttons">
           <button type="button">Comments</button>
-          <button type="button" onClick={() => handleDelete()}>Remove</button>
+          <button type="button" onClick={() => handleDelete(id)}>Remove</button>
           <button type="button">Edit</button>
         </div>
       </div>

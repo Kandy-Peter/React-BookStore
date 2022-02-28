@@ -13,6 +13,7 @@ const Books = () => {
         <Book
           post={post}
           key={post.id}
+          id={post.id}
           title={post.title}
           author={post.author}
           category={post.category}
