@@ -30,19 +30,25 @@ const BookForm = () => {
           placeholder="Author name"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
         <input
           type="text"
           placeholder="Book title..."
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
+          required
         />
         <select
           name="category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
+          required
         >
+          <option value="" hidden>Category</option>
           <option>Action</option>
+          <option>Romantic</option>
+          <option>Software</option>
           <option>Drama</option>
           <option>Science Fiction</option>
         </select>
