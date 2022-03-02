@@ -1,15 +1,15 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { deleteBook } from '../redux/books/books';
 
 const Book = (book) => {
   const {
-    category, title, author, id,
+    category, title, id,
   } = book;
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
-    dispatch(removeBook(id));
+    dispatch(deleteBook(id));
   };
 
   return (
@@ -17,7 +17,6 @@ const Book = (book) => {
       <div className="details-clm">
         <p>{category}</p>
         <h3>{title}</h3>
-        <p>{author}</p>
         <div className="buttons">
           <button type="button">Comments</button>
           <button type="button" onClick={() => handleDelete(id)}>Remove</button>
