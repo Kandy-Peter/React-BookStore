@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import nextId from 'react-id-generator';
+import uuid from 'react-uuid';
 import { addNewBookApi } from '../redux/books/books';
 
 const BookForm = () => {
@@ -11,7 +11,7 @@ const BookForm = () => {
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      item_id: nextId(),
+      item_id: uuid(),
       title,
       category,
     };
