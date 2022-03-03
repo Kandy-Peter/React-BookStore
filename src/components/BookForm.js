@@ -1,26 +1,23 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import nextId from 'react-id-generator';
-import { addBook } from '../redux/books/books';
+import uuid from 'react-uuid';
+import { addNewBookApi } from '../redux/books/books';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
-  const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
 
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      id: nextId(),
+      item_id: uuid(),
       title,
-      author,
       category,
     };
-    dispatch(addBook(newBook));
+    dispatch(addNewBookApi(newBook));
     setTitle('');
     setCategory('');
-    setAuthor('');
   };
   return (
     <div className="form-container">
@@ -30,13 +27,6 @@ const BookForm = () => {
           placeholder="Author name"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Book title..."
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
           required
         />
         <select
