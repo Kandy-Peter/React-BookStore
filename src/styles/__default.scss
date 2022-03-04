@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto Serif', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -16,6 +17,10 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
+  }
+
+  button {
+    font-family: 'Roboto Serif', sans-serif;
   }
 
   a {

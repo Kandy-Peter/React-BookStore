@@ -21,10 +21,11 @@ const BookForm = () => {
   };
   return (
     <div className="form-container">
+      <h2>ADD NEW BOOK</h2>
       <form onSubmit={submitBookToStore}>
         <input
           type="text"
-          placeholder="Author name"
+          placeholder="Book title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
@@ -35,7 +36,7 @@ const BookForm = () => {
           onChange={(e) => setCategory(e.target.value)}
           required
         >
-          <option value="" hidden>Category</option>
+          <option className="active" hidden>Category</option>
           <option>Action</option>
           <option>Romantic</option>
           <option>Software</option>

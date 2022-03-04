@@ -8,7 +8,7 @@ const Navbar = () => (
       <NavLink exact to="/" activeClassName="nav-active">Home</NavLink>
       <NavLink exact to="/Categories" activeClassName="nav-active">Categories</NavLink>
     </div>
-    <span>icon</span>
+    <span><img src="https://img.icons8.com/ios-filled/50/4a90e2/user.png" alt="user_icon" /></span>
   </div>
 );
 

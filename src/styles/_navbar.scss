@@ -4,30 +4,49 @@
   height: 80px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #c6c6c6;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 6rem;
 
   h1 {
     color: #0290ff;
     font-size: 30px;
     margin: 0 2rem;
+    margin-right: 3rem;
   }
 
   a {
     color: rgb(34, 34, 34);
-    font-size: 16px;
-    margin-right: 20px;
+    font-size: 14px;
+    margin: 2rem;
+
+    .nav-active {
+      color: #888;
+    }
 
     &:hover {
       color: #0290ff;
       font-weight: 700;
-      text-decoration: underline;
       transition: 0.5s all;
     }
   }
 
-  span {
-    text-align: end;
+  .links {
     flex: 1;
+    font-size: 0.8rem;
+  }
+
+  span {
+    text-align: center;
     margin: 0 2rem;
+    border: 1px solid #e8e8e8;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding-top: 8px;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
