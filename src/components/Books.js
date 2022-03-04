@@ -34,7 +34,7 @@ const Books = () => {
         {!isEmpty(postBook) && postBook.map((post) => (
           <div key={post.item_id} className="bookStore">
             <div className="details-clm">
-              <p>{post.category}</p>
+              <h4>{post.category}</h4>
               <h3>{post.title}</h3>
               <div className="buttons">
                 <button type="button">Comments</button>
